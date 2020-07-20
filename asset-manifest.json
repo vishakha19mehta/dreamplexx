@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/dreamplexx/static/css/main.dc86ec91.chunk.css",
+    "main.js": "/dreamplexx/static/js/main.bae0bc88.chunk.js",
+    "main.js.map": "/dreamplexx/static/js/main.bae0bc88.chunk.js.map",
+    "runtime-main.js": "/dreamplexx/static/js/runtime-main.1951562c.js",
+    "runtime-main.js.map": "/dreamplexx/static/js/runtime-main.1951562c.js.map",
+    "static/js/2.f5806803.chunk.js": "/dreamplexx/static/js/2.f5806803.chunk.js",
+    "static/js/2.f5806803.chunk.js.map": "/dreamplexx/static/js/2.f5806803.chunk.js.map",
+    "index.html": "/dreamplexx/index.html",
+    "precache-manifest.cfeb8b9c3b4e292d3c260a36c82fab33.js": "/dreamplexx/precache-manifest.cfeb8b9c3b4e292d3c260a36c82fab33.js",
+    "service-worker.js": "/dreamplexx/service-worker.js",
+    "static/css/main.dc86ec91.chunk.css.map": "/dreamplexx/static/css/main.dc86ec91.chunk.css.map",
+    "static/js/2.f5806803.chunk.js.LICENSE.txt": "/dreamplexx/static/js/2.f5806803.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1951562c.js",
+    "static/js/2.f5806803.chunk.js",
+    "static/css/main.dc86ec91.chunk.css",
+    "static/js/main.bae0bc88.chunk.js"
+  ]
+}
