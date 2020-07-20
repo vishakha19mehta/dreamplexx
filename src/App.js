@@ -39,6 +39,15 @@ function App() {
 
 
       <div className="container" style={{ marginTop: '10rem' }}>
+        {
+          searchTerm.length !== 0 ?  
+        
+        <div className="row">
+          <div className="col-12">
+            <h3 className="mb-5" style={{textTransform: 'capitalize'}}>Your Result for {searchTerm}</h3>
+          </div>
+        </div>
+          : ''}
         <div className="row">
           {
             searchResults.map((val) =>
