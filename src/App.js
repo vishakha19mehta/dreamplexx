@@ -1,24 +1,60 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import './App.scss';
+import TopHeader from './component/header/header';
+import Inputfield from './component/header/inputform';
+import MovieCard from './component/moviecard/moviecard';
+import Cardata from './Carddata';
+
 
 function App() {
+
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [searchResults, setSearchResults] = React.useState([]);
+
+  const handleChange = event => {
+    setSearchTerm(event.target.value.toLowerCase());
+  };
+
+  React.useEffect(() => {
+    const results = Cardata.filter(cardlist =>
+      cardlist.title.toLowerCase().includes(searchTerm)
+    );
+    setSearchResults(results);
+  }, [searchTerm]);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <section className="top-header">
+        <div className="container">
+          <div className="row">
+            <TopHeader />
+            <Inputfield handleChange={handleChange} />
+          </div>
+        </div>
+      </section>
+
+
+
+      <div className="container" style={{ marginTop: '10rem' }}>
+        <div className="row">
+          {
+            searchResults.map((val) =>
+              <MovieCard
+                key={val.id}
+                imgurl={val.imgurl}
+                title={val.title}
+                rating={val.rating}
+                genre={val.genre}
+                link={val.link}
+              />)
+          }
+
+        </div>
+      </div>
+
     </div>
   );
 }
